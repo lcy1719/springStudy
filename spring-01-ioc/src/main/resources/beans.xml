@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用spring创建对象，在spring里，这些都是bean-->
+
+    <!--创建接口对象-->
+    <!--<bean id="mysqlimp" class="User.UserMysqlimp"></bean>-->
+    <!--<bean id="usersqliteimp" class="User.userSqltieimp"></bean>-->
+
+    <!--&lt;!&ndash;创建service接口对象&ndash;&gt;-->
+    <!--<bean id="userserviceimp" class="UserService.Userviceimpl">-->
+        <!--&lt;!&ndash;ref指向哪个类&ndash;&gt;-->
+        <!--<property name="userdao" ref="usersqliteimp"/>-->
+    <!--</bean>-->
+
+    <!--当程序需要修改时，只需要改里面xml的数据-->
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--有参构造：第一种下标值赋值-->
+    <!--<bean id="hello" class="ioc.hello">-->
+        <!--<constructor-arg index="0" value="李晨阳"></constructor-arg>-->
+    <!--</bean>-->
+    <!--第二种：通过类型引用-->
+    <!--<bean id="hello" class="ioc.hello">-->
+        <!--<constructor-arg type="java.lang.String" value="李晨阳"></constructor-arg>-->
+    <!--</bean>-->
+    <!--第三种：通过参数名-->
+    <!--
+        id：bean的唯一标识符，也就是对象名
+        class:bean所对应的类
+        name:别名，可以取多个
+    -->
+    <!--<bean id="hello" class="ioc.hello">-->
+        <!--<constructor-arg name="name" value="李晨阳"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="hello2" class="ioc.Hello2">-->
+    <!--</bean>-->
+</beans>

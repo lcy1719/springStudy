@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+         https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--使用spring创建对象，在spring里，这些都是bean-->
+    <bean id="userServiceimp" class="com.cy.UserServiceimp"/>
+    <bean id="log" class="com.cy.Log"/>
+    <bean id="logafter" class="com.cy.Logafter"/>
+
+    <!--方式1，使用spring api原生接口-->
+    <!--配置aop，需要导入aop的约束-->
+    <!--<aop:config>-->
+        <!--&lt;!&ndash;切入点：expression:表达式 ,execution(要执行的位置 * *)&ndash;&gt;-->
+        <!--<aop:pointcut id="pointcut" expression="execution(* com.cj.UserServiceimp.*(..))"/>-->
+        <!--&lt;!&ndash;执行环绕增加(要切入什么东西)&ndash;&gt;-->
+        <!--<aop:advisor advice-ref="log" pointcut-ref="pointcut"/>-->
+        <!--<aop:advisor advice-ref="logafter" pointcut-ref="pointcut"/>-->
+    <!--</aop:config>-->
+    <!--方法2，使用自定义类-->
+    <!--<bean id="diy" class="com.diy.Add"/>-->
+    <!--<aop:config>-->
+        <!--&lt;!&ndash;自定义切面,ref要引用的类&ndash;&gt;-->
+        <!--<aop:aspect ref="diy">-->
+            <!--&lt;!&ndash;切入点&ndash;&gt;-->
+            <!--<aop:pointcut id="point" expression="execution(* com.cj.UserServiceimp.*(..))"/>-->
+            <!--&lt;!&ndash;通知&ndash;&gt;-->
+            <!--<aop:after method="after" pointcut-ref="point"/>-->
+            <!--<aop:before method="before" pointcut-ref="point"/>-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+    <!--方法3，使用注解-->
+    <bean id="anno" class="com.anno.Anno"/>
+    <aop:aspectj-autoproxy/>
+</beans>

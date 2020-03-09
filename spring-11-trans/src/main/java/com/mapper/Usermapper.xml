@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--configration核心配置文件-->
+<mapper namespace="com.mapper.Usermapper">
+    <select id="select" resultType="com.cy.User">
+        select * from mybatis.user;
+    </select>
+    <insert id="add" parameterType="user">
+        INSERT into mybatis.user(id,name) VALUES(#{id},#{name})
+    </insert>
+    <delete id="del" parameterType="int">
+        DELETEs from mybatis.user WHERE id=#{id}
+    </delete>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.cy.pojo.Adress"></bean>
+
+    <bean id="student" class="com.cy.pojo.Student">
+        <property name="name" value="李晨阳"></property>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>书1</value>
+                <value>书2</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>集合1</value>
+                <value>集合2</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="键值对1"></entry>
+                <entry key="2" value="键值对2"></entry>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>set集合1</value>
+                <value>set集合2</value>
+            </set>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="url">localhost</prop>
+                <prop key="name">root</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
